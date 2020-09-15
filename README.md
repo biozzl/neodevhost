@@ -1,8 +1,8 @@
-NEODEV HOST
-
 ![Logo](https://raw.githubusercontent.com/neodevpro/neodevhost/master/logo.png)
 
-
+    
+    
+    
 ## The Powerful Friendly Uptodate AD Blocking Hosts 最新强大而友善的去广告
 
 
@@ -11,23 +11,27 @@ NEODEV HOST
 [![license](https://img.shields.io/github/license/neodevpro/neodevhost.svg)](https://github.com/neodevpro/neodevhost/blob/master/LICENSE)
 
 ```
-Total ad / tracking block list 屏蔽追踪广告总数: 67391
+Total ad / tracking block list 屏蔽追踪广告总数: 107473
 
-Total whitelist list 白名单总数: 1721
+Total allowlist list 允许名单总数: 1469
 
-Total combine list 结合总数： 67253
+Total combine list 结合总数： 107346
 
-Update 更新时间: 2020-06-09
+Total deadblock list 失效屏蔽广告域名： 24779
+
+Total deadallow list 失效允许广告域名： 106
+
+Update 更新时间: 2020-09-15
 ```
-## Introduction 介绍
 ### UPTODATE 保持最新<br/>
     Merge everyhours　每小时更新
 ### POWERFUL　 强大有效<br/>
     To block all ad / tracking  有效拦截广告追踪　
 ### FRIENDLY　友善使用<br/>
     Easy to use and welcome to report issues　简单使用欢迎回报问题
-   
+
 ## Supported Platform 支持平台
+
 ```
 -Windows
 -Android
@@ -42,57 +46,27 @@ Update 更新时间: 2020-06-09
 -Adaway
 -Adblocker/Adguard
 -etc
-```
-## Download 下载 
-
-### Recommend 建议下载　: AD + Whitelist [Host] 去广告+白名单　结合拦截
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/combine
-```
-### AD host 去广告 [hosts]
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/host
-```
-
-### Whitelist 域名白名单 [whitelist]
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/whitelist
-```
-
-
-### For Adblocker (Adguard)　广告拦截器　: AD 去广告
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker
-```
-
-### For Adblocker (Adguard)　广告拦截器　: Whitelist 白名单（防止拦截错误）
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblockerwhite
-```
-
-### For Adblocker (Adguard)　广告拦截器　: AD + Whitelist 去广告+白名单　结合拦截
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblockercombine
-```
-
-### Dnsmasq AD List Dnsmasq 广告拦截格式 [Dnsmasq] 
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/hosts_dnsmasq.conf
-```
-
-### Dnsmasq AD + Whitelist　List Dnsmasq　广告+白名单　结合拦截格式  [Dnsmasq] 
 ``` 
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/combinehosts_dnsmasq.conf
-```
-### Domain AD 普通广告域名
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/domain
-```
 
-### Domain AD + Whitelist　普通 广告+白名单　域名结合
-```
-https://raw.githubusercontent.com/neodevpro/neodevhost/master/domaincombine
-```
+## Download 下载
+### Full version (With Dead Domain inside) 完整版（包含过期域名）：
+Number of Domain 域名数目： 107346
+
+Format 格式 | Compatible with 适用于 | Raw | 国内加速链接  
+--------- |:-------------:|:-------------:|:-------------:
+Host | Pihole，Adaway，hBlock ... |[link](https://raw.githubusercontent.com/neodevpro/neodevhost/master/host) | [link](https://neodev.team/host)
+Adblocker | uBlock，Adguard ... |[link](https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker) | [link](https://neodev.team/adblocker) 
+Dnsmasq | Dns ... |[link](https://raw.githubusercontent.com/neodevpro/neodevhost/master/host_dnsmasq.conf) | [link](https://neodev.team/host_dnsmasq.conf)
+
+### Lite version (Without Dead Domain inside) 精简版（不包含过期域名）：
+
+Number of Domain 域名数目： 82800
+
+Format 格式 | Compatible with 适用于 | Raw | 国内加速链接  
+--------- |:-------------:|:-------------:|:-------------:
+Host | Pihole，Adaway，hBlock ... |[link](https://raw.githubusercontent.com/neodevpro/neodevhost/master/lite_host) | [link](https://neodev.team/lite_host)
+Adblocker | uBlock，Adguard ... |[link](https://raw.githubusercontent.com/neodevpro/neodevhost/master/lite_adblocker) | [link](https://neodev.team/lite_adblocker) 
+Dnsmasq | Dns ... |[link](https://raw.githubusercontent.com/neodevpro/neodevhost/master/lite_host_dnsmasq.conf) | [link](https://neodev.team/lite_host_dnsmasq.conf)
 
 ## How To Use 如何使用
 ```
@@ -107,7 +81,7 @@ https://raw.githubusercontent.com/neodevpro/neodevhost/master/domaincombine
 ```
 ## Pihole Installation 安装导入教程
 
-Import and Installation 导入和安装<br/>
+### Import and Installation 导入和安装<br/>
 
 1.Login to pihole website<br/>
 2.Go to Groupmanagement > Adlists<br/>
@@ -123,8 +97,10 @@ pihole -g
 7.Then it will import both NEODEV host and whitelist into your Pihole <br/>
 
 
-Remove and Uninstall 移除和卸载<br/>
-
+### Remove and Uninstall 移除和卸载<br/>
+sh: line 177: syntax error near unexpected token `)'
+263
+./host.sh: line 177: `sed -i '63cNumber of Domain 域名数目：
 1.Login to pihole website<br/>
 2.Go to Groupmanagement > Adlists<br/>
 3.click the red trash can button<br/>
@@ -139,19 +115,26 @@ pihole -g
 7.Then it will Remove and Uninstall both NEODEV host and whitelist from your Pihole <br/>
 
 ## Sources of AD-hosts data 去广告host源
+AD-hostss | Link  
+--------- |:-------------:
+Anti-AD | [link](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt)
+Ad-wars | [link](https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts)
+Adguard | [link](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt)
+Neohost | [link](https://raw.githubusercontent.com/neoFelhz/neohosts/gh-pages/full/hosts)
+StevenBlack | [link](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts)
+Yhosts | [link](https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts)
 
->https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts<br/>
->https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts<br/>
->https://hosts.nfz.moe/full/hosts<br/>
->https://raw.githubusercontent.com/Licolnlee/AdBlockList/master/domain.txt<br/>
->https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts<br/>
+## Sources of Allowlist 允许名单
+Allowlist | Link  
+--------- |:-------------:
+AnudeepND | [link](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt)
+AnudeepND-optional | [link](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt)
+Ultimate-Hosts-Blacklist | [link](https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list)
+WildcardTech | [link](https://raw.githubusercontent.com/WildcardTech/Filter-Domain-List/master/whitelist.txt)
+Yhosts | [link](https://raw.githubusercontent.com/VeleSila/yhosts/master/whitelist.txt)
 
-## Sources of Whitelist data 域名白名单源
-
->https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt<br/>
->https://raw.githubusercontent.com/VeleSila/yhosts/master/whitelist.txt<br/>
->https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list<br/>
->https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt<br/>
->https://raw.githubusercontent.com/Licolnlee/AdBlockList/master/whitelist.txt<br/>
->https://raw.githubusercontent.com/neodevpro/neodevhost/master/customwhitelist<br/>
->https://raw.githubusercontent.com/WildcardTech/Filter-Domain-List/master/whitelist.txt<br/>
+## Dead Domain List 过期域名名单
+Allowlist | Link  
+--------- |:-------------:
+Dead-block | [link](https://raw.githubusercontent.com/FusionPlmH/dead-block/master/deadblock)
+Dead-allow | [link](https://raw.githubusercontent.com/neodevpro/dead-allow/master/deadallow)
